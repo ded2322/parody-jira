@@ -24,7 +24,7 @@ async def update_states(data_change: SStatesUpdate):
     if not data_task:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Состояние на найдено")
 
-    await StatesDao.update_date(data_task["id"], "title", data_change.new_title)
+    await StatesDao.update_date(data_task[0]["id"], "title", data_change.new_title)
 
 
 @router.delete("/delete")
@@ -32,4 +32,4 @@ async def delete_tasks(title_task: str):
     data_task = await StatesDao.found_one_or_none(title=title_task)
     if not data_task:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Состояние на найдено")
-    await StatesDao.delete(id=data_task["id"])
+    await StatesDao.delete(id=data_task[0]["id"])
