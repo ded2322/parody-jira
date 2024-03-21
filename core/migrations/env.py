@@ -6,11 +6,11 @@ from sqlalchemy import pool
 from alembic import context
 
 
-from todo_app.config import settings
-from todo_app.database import Base
+from core.config import settings
+from core.database import Base
 
-from todo_app.models.todo_models import Tasks
-from todo_app.models.state_models import States
+from core.models.todo_models import Tasks
+from core.models.state_models import States
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
 config = context.config

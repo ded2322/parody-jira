@@ -1,8 +1,8 @@
 from fastapi import APIRouter, HTTPException, status
 
-from todo_app.dao.tasks_dao import TasksDao
-from todo_app.dao.states_dao import StatesDao
-from todo_app.schemas.tasks_schemas import STasks, STasksUpdate
+from core.dao.tasks_dao import TasksDao
+from core.dao.states_dao import StatesDao
+from core.schemas.tasks_schemas import STasks, STasksUpdate
 
 router = APIRouter(
     prefix="/tasks",

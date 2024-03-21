@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException,status
-from todo_app.dao.states_dao import StatesDao
-from todo_app.schemas.states_schemas import SStates, SStatesUpdate
+from core.dao.states_dao import StatesDao
+from core.schemas.states_schemas import SStates, SStatesUpdate
 
 router = APIRouter(
     prefix="/state",
