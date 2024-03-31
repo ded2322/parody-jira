@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+  db:
+    image: postgres:15
+    container_name: jira_db
+    env_file:
+        - .env
+    volumes:
+      - postgres:/var/lib/postgres
+    ports:
+      - 5432:5432
+
+  jira_service:
+    image: jira_app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: sh -c "alembic upgrade head && uvicorn core.main:app --host 0.0.0.0 --port 8000"
+    ports:
+      - 8000:8000
+volumes:
+  postgres:
