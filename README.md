@@ -1,7 +1,7 @@
 # Todo
 Этот проект позволяет развернуть с помощью Docker, backend-api для todo листа
 
-Улучшеная версия с поддержкой docker: https://github.com/ded2322/parody-jira/tree/main
+Улучшеная версия + поддержка docker: https://github.com/ded2322/parody-jira/tree/main
 
 
 ## Функциональность
