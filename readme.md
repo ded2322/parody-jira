@@ -1,5 +1,5 @@
 # API для управления списком задач (Parody-jira)
-Урощенная версия, отсутствует поддержка докера: https://github.com/ded2322/parody-jira.git
+Урощенная версия: https://github.com/ded2322/parody-jira.git
 
 # Описание
 API предоставляет следующие возможности:
